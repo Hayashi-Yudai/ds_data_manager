@@ -11,6 +11,10 @@ packages = [{include = "ds_framework"}]
 python = ">=3.7,<3.12"
 
 
+[tool.poetry.group.dev.dependencies]
+black = "^22.10.0"
+flake8 = "^5.0.4"
+
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
