@@ -2,6 +2,15 @@
 
 ![workflow](https://github.com/Hayashi-Yudai/ds_data_manager/actions/workflows/python_app.yml/badge.svg)
 
+This tool is designed to make it easier to manage data when analyzing large amounts of data on the Cloud.
+
+### Requirements
+
+- Python >= 3.9
+- Poetry ^= 2.1
+- Google Cloud SDK
+- Read access to some Google Cloud Storage buckets
+
 ### Quick start
 
 Run
