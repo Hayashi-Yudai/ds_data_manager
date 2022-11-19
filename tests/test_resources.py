@@ -1,6 +1,6 @@
 import pytest
 
-from core.resources import Resource, GCSResource
+from core.resource_classes import Resource, GCSResource
 
 
 def test_gcs_resource():
