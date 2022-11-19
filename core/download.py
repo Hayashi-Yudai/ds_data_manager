@@ -1,8 +1,7 @@
 from pathlib import Path
 import subprocess
 from typing import Any
-
-from src import config
+from core import config
 
 
 def exclude_if_exist(target_files: list[str], data_dir: str) -> list[str]:
