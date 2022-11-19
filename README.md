@@ -36,10 +36,23 @@ resources: list[dict[str, Union[str, list[str], bool]]] = [
 ]
 ```
 
-then, run
+The files can be downloaded with the following command
 
 ```bash
 poetry run python src/$PROJECT_NAME/resources.py
 ```
 
-You can find files in `data/$PROJECT_DIR`.
+You can find files in `data/$PROJECT_DIR`. Then, analyze data as you want. We prepare some variables for you
+
+```python
+from core import config
+
+# config.REPO_ROOT: Absolute path to this repository
+# config.DATA_ROOT: Absolute path to `data` directory
+# cofig.OUTPUT_ROOT: Absolute path to `outputs` directory
+# config.SOURCE_ROOT: Absolute path to `src` directory
+
+# ex.
+# PROJECT = "project_1"
+# data = pd.read_csv(f"{config.DATA_ROOT}/{PROJECT}/data.csv")
+```
