@@ -47,19 +47,25 @@ def _download_resource(
         raise RuntimeError("Script Failed")
 
 
+def _build_source_and_destination(
+    project: str, resource: dict[str, Any]
+) -> tuple[str, str]:
+    source = f"gs://{resource['bucket']}/{resource['project']}"
+    if resource["subproject"] != "":
+        source += f"/{resource['subproject']}/"
+
+    destination = f"{config.REPO_ROOT}/data/{project}/{resource['destination']}"
+
+    return source, destination
+
+
 def download(project: str, resources: list[dict[str, Any]]):
     for rs in resources:
-        gcs_base = f"gs://{rs['bucket']}/{rs['project']}"
-
-        if rs["subproject"] != "":
-            gcs_base += f"/{rs['subproject']}/"
-
-        data_dir = f"{config.REPO_ROOT}/data/{project}/{rs['destination']}"
-        print(data_dir)
+        source, destination = _build_source_and_destination(project, rs)
 
         _download_resource(
             rs["files"],
-            data_dir,
-            gcs_base,
+            destination,
+            source,
             skip_if_exist=rs["skip_if_exist"],
         )
