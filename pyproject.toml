@@ -5,7 +5,7 @@ description = ""
 authors = ["Yudai Hayashi <yudai@wantedly.com>"]
 license = "MIT"
 readme = "README.md"
-packages = [{include = "src"}]
+packages = [{include = "src"}, {include = "core"}]
 
 [tool.poetry.dependencies]
 python = ">=3.7,<3.12"
