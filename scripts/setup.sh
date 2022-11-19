@@ -16,12 +16,13 @@ if [ ! -e $OUTPUT_ROOT ]; then
   echo "Create outputs directory in $PROEJCT_ROOT/outputs"
   mkdir -p $OUTPUT_ROOT
 fi
-if [ ! -e $SOURCE_ROOT]; then
-  echo "Create outputs directory in $PROEJCT_ROOT/src"
+if [ ! -e $SOURCE_ROOT ]; then
+  echo "Create source directory in $PROEJCT_ROOT/src"
   mkdir -p $SOURCE_ROOT
 
-  cp $REPO_ROOT/core/download.py $SOURCE_ROOT
-  sed -i -e "s/sample/$PROJECT/g" $SOURCE_ROOT/download.py
+  cp $REPO_ROOT/core/resources.py $SOURCE_ROOT
+  sed -i -e "s/fawef230rfaw/$PROJECT/g" $SOURCE_ROOT/resources.py
+  rm $SOURCE_ROOT/resources.py-e
 
   # TODO: $PROJECT ごとに.envを自動生成する
 fi
