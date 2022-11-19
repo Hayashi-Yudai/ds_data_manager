@@ -2,7 +2,7 @@
 name = "ds-framework"
 version = "0.1.0"
 description = ""
-authors = ["Yudai Hayashi <yudai@wantedly.com>"]
+authors = ["Yudai Hayashi <yudai0913haya@gmail.com>"]
 license = "MIT"
 readme = "README.md"
 packages = [{include = "src"}, {include = "core"}]
