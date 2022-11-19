@@ -1,5 +1,6 @@
 __pycache__
 .venv
+src
 outputs
 data
 config.py
