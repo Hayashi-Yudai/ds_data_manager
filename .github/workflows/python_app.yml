@@ -30,7 +30,7 @@ jobs:
       - name: Install dependencies
         run: poetry install --no-interaction
       - name: Run pytest
-        run: poetry run python pytest
+        run: poetry run pytest
       - name: Run lint
         run: poetry run flake8 core/ tests/
       - name: Run formatter
