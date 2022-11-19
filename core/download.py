@@ -21,7 +21,7 @@ def exclude_if_exist(target_files: list[str], data_dir: str) -> list[str]:
     return res
 
 
-def download_resource(
+def _download_resource(
     files: list[str],
     destination_dir: str,
     gcs_base: str,
@@ -52,11 +52,12 @@ def download(project: str, resources: list[dict[str, Any]]):
         gcs_base = f"gs://{rs['bucket']}/{rs['project']}"
 
         if rs["subproject"] != "":
-            gcs_base += "/" + rs["subproject"]
+            gcs_base += f"/{rs['subproject']}/"
 
-        data_dir = f"{config.REPO_ROOT}/data/{project}/rs['destination']"
+        data_dir = f"{config.REPO_ROOT}/data/{project}/{rs['destination']}"
+        print(data_dir)
 
-        download_resource(
+        _download_resource(
             rs["files"],
             data_dir,
             gcs_base,
