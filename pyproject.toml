@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "ds-framework"
+name = "ds-data-manager"
 version = "0.1.0"
 description = ""
 authors = ["Yudai Hayashi <yudai0913haya@gmail.com>"]
@@ -9,6 +9,7 @@ packages = [{include = "src"}, {include = "core"}]
 
 [tool.poetry.dependencies]
 python = ">=3.7,<3.12"
+icecream = "^2.1.3"
 
 [tool.poetry.group.dev.dependencies]
 black = "^22.10.0"
