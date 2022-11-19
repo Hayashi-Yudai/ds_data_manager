@@ -33,4 +33,4 @@ then, run
 poetry run python src/$PROJECT_NAME/resources.py
 ```
 
-You can find files in `outputs/$PROJECT_DIR`.
+You can find files in `data/$PROJECT_DIR`.
