@@ -50,9 +50,9 @@ def _download_resource(
 def _build_source_and_destination(
     project: str, resource: dict[str, Any]
 ) -> tuple[str, str]:
-    source = f"gs://{resource['bucket']}/{resource['project']}"
-    if resource["subproject"] != "":
-        source += f"/{resource['subproject']}/"
+    source = f"gs://{resource['bucket']}/{resource['blob']}"
+    if resource["subblob"] != "":
+        source += f"/{resource['subblob']}/"
 
     destination = f"{config.REPO_ROOT}/data/{project}/{resource['destination']}"
 

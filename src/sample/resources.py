@@ -7,8 +7,8 @@ PROJECT = "sample"
 resources: list[dict[str, Union[str, list[str], bool]]] = [
     {
         "bucket": "",
-        "project": "",
-        "subproject": "",  # Optional: ex. date
+        "blob": "",
+        "subblob": "",  # Optional: ex. date
         "files": ["parent_dir/file1", "file2"],
         "destination": "path/to/save",
         "skil_if_exist": True,
