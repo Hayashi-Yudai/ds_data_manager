@@ -1,6 +1,7 @@
 ## DS Data Manager
 
-![workflow](https://github.com/Hayashi-Yudai/ds_data_manager/actions/workflows/python_app.yml/badge.svg)
+![workflow](https://github.com/Hayashi-Yudai/ds_data_manager/actions/workflows/python_ci.yml/badge.svg)
+![workflow](https://github.com/Hayashi-Yudai/ds_data_manager/actions/workflows/docker_build.yml/badge.svg)
 ![License](https://img.shields.io/github/license/Hayashi-Yudai/ds_data_manager)
 
 This tool is designed to make it easier to manage data when analyzing large amounts of data on the Cloud.
