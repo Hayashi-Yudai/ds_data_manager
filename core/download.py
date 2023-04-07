@@ -38,7 +38,7 @@ def _download_resource(
 
     result = subprocess.call(
         [
-            f"{config.REPO_ROOT}/scripts/download_data.sh",
+            f"{config.REPO_ROOT}/scripts/download_from_gcs.sh",
             targets,
             destination_dir,
         ]
